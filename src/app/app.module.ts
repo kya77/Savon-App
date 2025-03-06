@@ -17,6 +17,7 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
     PrivacyPolicyComponent,
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   imports: [
     BrowserModule,
