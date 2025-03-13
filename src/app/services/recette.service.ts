@@ -9,7 +9,7 @@ import { Recette } from '../models/Recette';
 })
 
 export class RecetteService {
-    private apiUrl = 'http://localhost:8080/api-savon/v1';
+    private apiUrl = 'http://172.16.0.24:8080/api-savon/v1';
   
     constructor(private http: HttpClient) {}
   
