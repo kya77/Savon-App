@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 50px;
+    border-bottom: 2px solid #eee;
+  }
+  
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #5b00af;
+    text-transform: uppercase;
+}
+  
+nav {
+    display: flex;
+    gap: 20px;
+}
+  
+nav a {
+    text-decoration: none;
+    color: #383838;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+  
+nav a:hover {
+    color: #371B7D; 
+}
+
+.btn{
+    padding: 9px 25px;
+    background-color: #5b00af; /* Violet */
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    background-color: #39005c;
+}
+  
+/* Responsive design: when screen width is smaller than 768px */
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+}
+    
+header nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+}
