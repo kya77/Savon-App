@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { RecettesManagerComponent } from './pages/recettes-manager/recettes-mana
 import { IngredientListComponent } from './shared/ingredient-list/ingredient-list.component';
 import { IngredientFormComponent } from './shared/ingredient-form/ingredient-form.component';
 import { IngredientImportExportComponent } from './shared/ingredient-import-export/ingredient-import-export.component';
-import { IngredientManagerPageComponent } from './shared/ingredient-manager-page/ingredient-manager-page.component';
+import { IngredientManagerPageComponent } from './pages/ingredient-manager-page/ingredient-manager-page.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { IngredientManagerPageComponent } from './shared/ingredient-manager-page
     IngredientListComponent,
     IngredientFormComponent,
     IngredientImportExportComponent,
-    IngredientManagerPageComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}
