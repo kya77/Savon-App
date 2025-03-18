@@ -10,6 +10,10 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { RecettesComponent } from './pages/recettes/recettes.component';
 import { RecettesCalculatorComponent } from './pages/RecetteCalculator/recettes-calculator.component';
 import { RecettesManagerComponent } from './pages/recettes-manager/recettes-manager.component';
+import { IngredientListComponent } from './shared/ingredient-list/ingredient-list.component';
+import { IngredientFormComponent } from './shared/ingredient-form/ingredient-form.component';
+import { IngredientImportExportComponent } from './shared/ingredient-import-export/ingredient-import-export.component';
+import { IngredientManagerPageComponent } from './shared/ingredient-manager-page/ingredient-manager-page.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { RecettesManagerComponent } from './pages/recettes-manager/recettes-mana
     RecettesComponent,
     RecettesCalculatorComponent,
     RecettesManagerComponent,
+    IngredientListComponent,
+    IngredientFormComponent,
+    IngredientImportExportComponent,
+    IngredientManagerPageComponent,
   ],
   imports: [
     BrowserModule,
