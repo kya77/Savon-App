@@ -52,46 +52,50 @@ this.clearMessageAfterDelay();
 * Importe des ingrédients depuis un fichier CSV.
 * @param event - L'événement déclenché par l'input file.
 */
-importFromCSV(event: any): void {
-const file = event.target.files[0];
-if (!file) return;
-const reader = new FileReader();
-reader.onload = (e) => {
-const text = e.target?.result as string;
-const rows = text.split("\n").slice(1); // Ignore l'en-tête
-rows.forEach(row => {
-const [id, nom, iode, ins, sapo, volMousse, tenueMousse, douceur,
-lavant, durete, solubilite, sechage, estCorpsGras] = row.split(",");
-const newIngredient: Ingredient = {
-id: null, // Laisse null pour générer un ID côté backend
-nom: nom.trim(),
-iode: parseFloat(iode),
-ins: parseFloat(ins),
-sapo: parseFloat(sapo),
-volMousse: parseFloat(volMousse),
-tenueMousse: parseFloat(tenueMousse),
-douceur: parseFloat(douceur),
-lavant: parseFloat(lavant),
-durete: parseFloat(durete),
-solubilite: parseFloat(solubilite),
-sechage: parseFloat(sechage),
-estCorpsGras: estCorpsGras.trim().toLowerCase() === "true",
-ligneIngredients: []
-};
-this.ingredientService.addIngredient(newIngredient).subscribe({
-next: () => {
-this.importComplete.emit(); // Notifie le parent pour rafraîchir la liste
-this.error = false;
-this.message = "Importation réussie !";
 
+importFromCSV(event: any): void {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+    const text = e.target?.result as string;
+    const rows = text.split("\n").slice(1); // Ignore l'en-tête
+    rows.forEach(row => {
+    const [id, nom, iode, ins, sapo, volMousse, tenueMousse, douceur,
+    lavant, durete, solubilite, sechage, estCorpsGras] = row.split(",");
+    const newIngredient: Ingredient = {
+    id: null, // Laisse null pour générer un ID côté backend
+    nom: nom.trim(),
+    iode: parseFloat(iode),
+    ins: parseFloat(ins),
+    sapo: parseFloat(sapo),
+    volMousse: parseFloat(volMousse),
+    tenueMousse: parseFloat(tenueMousse),
+    douceur: parseFloat(douceur),
+    lavant: parseFloat(lavant),
+    durete: parseFloat(durete),
+    solubilite: parseFloat(solubilite),
+    sechage: parseFloat(sechage),
+    estCorpsGras: estCorpsGras.trim().toLowerCase() === "true",
+    ligneIngredients: []
+};
+
+this.ingredientService.addIngredient(newIngredient).subscribe({
+    next: () => {
+    this.importComplete.emit(); // Notifie le parent pour rafraîchir la liste
+    this.error = false;
+    this.message = "Importation réussie !";
 },
+
 error: (error) => {
-this.error = true;
-this.message = "Erreur lors de l'import d'un ingrédient : ${error}"
+    this.error = true;
+    this.message = "Erreur lors de l'import d'un ingrédient : ${error}"
 }
 });
+
 this.clearMessageAfterDelay();
 });
+
 };
 reader.readAsText(file);
 }
@@ -99,9 +103,9 @@ reader.readAsText(file);
 * Efface le message après 3 secondes.
 */
 clearMessageAfterDelay(): void {
-setTimeout(() => {
-this.message = "";
-this.error = false;
-}, 3000);
-}
+        setTimeout(() => {
+        this.message = "";
+        this.error = false;
+        }, 3000);
+    }
 }

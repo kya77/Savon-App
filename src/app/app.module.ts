@@ -32,7 +32,8 @@ import { IngredientManagerPageComponent } from './pages/ingredient-manager-page/
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
