@@ -87,7 +87,7 @@ this.message = "Importation réussie !";
 },
 error: (error) => {
 this.error = true;
-this.message = "Erreur lors de l'import d'un ingrédient :" ${error}
+this.message = "Erreur lors de l'import d'un ingrédient : ${error}"
 }
 });
 this.clearMessageAfterDelay();

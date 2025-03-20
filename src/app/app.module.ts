@@ -27,6 +27,7 @@ import { IngredientManagerPageComponent } from './pages/ingredient-manager-page/
     IngredientListComponent,
     IngredientFormComponent,
     IngredientImportExportComponent,
+    IngredientManagerPageComponent,
   ],
   imports: [
     BrowserModule,
