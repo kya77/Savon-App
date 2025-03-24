@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'calculatrice', component: RecettesCalculatorComponent },
   { path: 'confidentialite', component: PrivacyPolicyComponent },
-  { path:"ingredients", component: IngredientManagerPageComponent},
+  { path:' ingredients ', component: IngredientManagerPageComponent},
   
 ];
 

@@ -15,6 +15,7 @@ import { IngredientListComponent } from './shared/ingredient-list/ingredient-lis
 import { IngredientFormComponent } from './shared/ingredient-form/ingredient-form.component';
 import { IngredientImportExportComponent } from './shared/ingredient-import-export/ingredient-import-export.component';
 import { IngredientManagerPageComponent } from './pages/ingredient-manager-page/ingredient-manager-page.component';
+import { RadarChartComponent } from './shared/radar-chart/radar-chart.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { IngredientManagerPageComponent } from './pages/ingredient-manager-page/
     IngredientFormComponent,
     IngredientImportExportComponent,
     IngredientManagerPageComponent,
+    RadarChartComponent,
   ],
   imports: [
     BrowserModule,
