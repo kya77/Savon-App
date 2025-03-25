@@ -132,6 +132,4 @@ class SimulateurService(
         }
         return recette
     }
-
-
 }
