@@ -16,6 +16,8 @@ import { IngredientFormComponent } from './shared/ingredient-form/ingredient-for
 import { IngredientImportExportComponent } from './shared/ingredient-import-export/ingredient-import-export.component';
 import { IngredientManagerPageComponent } from './pages/ingredient-manager-page/ingredient-manager-page.component';
 import { RadarChartComponent } from './shared/radar-chart/radar-chart.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { RadarChartComponent } from './shared/radar-chart/radar-chart.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

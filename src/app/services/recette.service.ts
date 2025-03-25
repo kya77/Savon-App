@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Recette } from '../models/Recette';
+import { RecetteDTO } from '../models/RecetteDTO';
 
 
 @Injectable({
@@ -35,7 +36,7 @@ export class RecetteService {
      * @param recette - L'objet Recette à enregistrer.
      * @returns Un Observable contenant la recette enregistrée.
      */
-    addRecette(recette: Recette): Observable<Recette> {
+    addRecette(recette: Recette | object): Observable<Recette> {
       return this.http.post<Recette>(`${this.apiUrl}/recette`, recette);
     }
   
@@ -45,7 +46,7 @@ export class RecetteService {
      * @param recette - L'objet Recette mis à jour.
      * @returns Un Observable contenant la recette mise à jour.
      */
-    updateRecette(id: number, recette: Recette): Observable<Recette> {
+    updateRecette(id: number, recette: RecetteDTO): Observable<Recette> {
       return this.http.put<Recette>(`${this.apiUrl}/recette/${id}`, recette);
     }
   
@@ -54,7 +55,7 @@ export class RecetteService {
      * @param id - L'identifiant de la recette.
      * @returns Un Observable vide.
      */
-    deleteRecette(id: number): Observable<void> {
-      return this.http.delete<void>(`${this.apiUrl}/recette/${id}`);
+    deleteRecette(): Observable<void> {
+      return this.http.delete<void>(`${this.apiUrl}/recette/all`);
     }
   }
